@@ -22,7 +22,7 @@ class AuthenController extends ControllerBase{
       $pass = trim($this->request->getPost('password')); // รับค่าจาก form
       $rememberMe = $this->request->getPost('rememberMe'); // รับค่าจาก form
 
-      $member = User::findFirst(["conditions"=>"username=?1","bind"=>[1=>$email]]); // ค้นหาชื่อผู้ใช้
+      $member = User::findFirst("username = '$email'");  // ค้นหาชื่อผู้ใช้
 
       if($member){
         if($member->active == '1'){
