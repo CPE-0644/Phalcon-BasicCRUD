@@ -62,12 +62,7 @@ class AuthenController extends ControllerBase{
       $firstname = trim($this->request->getPost('firstname')); // รับค่าจาก form
       
 
-      $member = new User(); // ทำการ insert ข้อมูล
-      $member->username = $email;
-      $member->password = $this->security->hash($pass);
-	  $member->first_name = $firstname;
-      $member->save();
-	  $this->response->redirect('authen');   
+      
       }
   }
   

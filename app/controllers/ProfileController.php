@@ -32,15 +32,8 @@ class ProfileController extends ControllerBase {
       $email = trim($this->request->getPost('email')); // รับค่าจาก form     
       $firstname = trim($this->request->getPost('firstname')); // รับค่าจาก form 
 	  
-	  $profileObj =  User::findFirst($profileId);
-      $profileObj->userName = $email;
-      $profileObj->first_name = $firstname;
-	  if($photoUpdate!='')$profileObj->picture = $photoUpdate;
-      $profileObj->save();
+	 
    } 	 
-   $profile = User::findFirst(["conditions"=>"id=?1","bind"=>[1=>$this->session->get('memberAuthen')]]);
-   $this->view->setVars([
-      'profile'=>$profile,
-   ]);	
+   
   }	
 }
