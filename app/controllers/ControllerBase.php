@@ -14,9 +14,10 @@ class ControllerBase extends Controller{
 	  ->addCss('public/css/freelancer.css');
 	$this->assets
       ->collection('styleslogin') // pack ไฟล์ css ที่ต้องการใช้งาน
+      ->addCss('public/css/myStyle.css')
       ->addCss('https://fonts.googleapis.com/css?family=Kanit')
       ->addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
-	  ->addCss('public/css/myStyle.css');
+	  ->addCss('public/css/freelancer.css');
     $this->assets
       ->collection('scripts') // pack ไฟล์ js ที่ต้องการใช้งาน
       ->addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
